@@ -1,0 +1,18 @@
+{
+	"/": [
+		"src/routes/+page.ts"
+	],
+	"/drawMap": [],
+	"/editRobot": [],
+	"/navi": [],
+	"/setting": [
+		"src/routes/setting/+page.ts"
+	],
+	"/simulation": [],
+	"/sverdle": [
+		"src/routes/sverdle/+page.server.ts"
+	],
+	"/sverdle/how-to-play": [
+		"src/routes/sverdle/how-to-play/+page.ts"
+	]
+}
