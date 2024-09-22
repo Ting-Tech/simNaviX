@@ -2,9 +2,17 @@
 	import { page } from "$app/stores";
 	import logo from "$lib/images/svelte-logo.svg";
 	import github from "$lib/images/github.svg";
+	import {
+		Accessibility,
+		Ruler,
+		LassoSelect,
+		Clapperboard,
+		Cog,
+		House,
+	} from "lucide-svelte";
 </script>
 
-<header>
+<header class="mt-1 border-black">
 	<div class="corner">
 		<a href="https://kit.svelte.dev">
 			<img src={logo} alt="SvelteKit" />
@@ -15,9 +23,9 @@
 		<!-- <svg viewBox="0 0 2 3" aria-hidden="true">
 			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
 		</svg> -->
-		<ul>
+		<ul class="rounded-full">
 			<li aria-current={$page.url.pathname === "/" ? "page" : undefined}>
-				<a href="/">Home</a>
+				<a href="/"><House /></a>
 			</li>
 
 			<li
@@ -25,7 +33,7 @@
 					? "page"
 					: undefined}
 			>
-				<a href="/editRobot">EditRobot</a>
+				<a href="/editRobot"><Accessibility /></a>
 			</li>
 
 			<li
@@ -33,7 +41,7 @@
 					? "page"
 					: undefined}
 			>
-				<a href="/drawMap">drawMap</a>
+				<a href="/drawMap"><Ruler /></a>
 			</li>
 
 			<li
@@ -41,7 +49,7 @@
 					? "page"
 					: undefined}
 			>
-				<a href="/navi">Navi</a>
+				<a href="/navi"><LassoSelect /></a>
 			</li>
 
 			<li
@@ -49,7 +57,15 @@
 					? "page"
 					: undefined}
 			>
-				<a href="/simulation">Simulate</a>
+				<a href="/simulation"><Clapperboard /></a>
+			</li>
+
+			<li
+				aria-current={$page.url.pathname.startsWith("/setting")
+					? "page"
+					: undefined}
+			>
+				<a href="/setting"><Cog /></a>
 			</li>
 		</ul>
 		<!-- <svg viewBox="0 0 2 3" aria-hidden="true">
