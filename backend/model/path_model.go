@@ -13,3 +13,13 @@ type PathRequest struct {
 type Path struct {
 	Path []Coordinate `json:"path"`
 }
+
+type Robot struct {
+	Length int `json:"length"`
+	Width  int `json:"width"`
+}
+
+type Space struct {
+	Length int `json:"length"`
+	Width  int `json:"width"`
+}
