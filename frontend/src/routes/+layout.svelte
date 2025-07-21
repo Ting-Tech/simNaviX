@@ -13,9 +13,7 @@
 	</main>
 
 	<footer>
-		<p>
-			visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to learn about SvelteKit
-		</p>
+		<p>Created by Saoirse Cheng</p>
 	</footer>
 </div>
 
@@ -32,9 +30,11 @@
 		flex-direction: column;
 		padding: 1rem;
 		width: 100%;
+		height: 100%;
 		max-width: 64rem;
 		margin: 0 auto;
 		box-sizing: border-box;
+		min-height: 0;
 	}
 
 	footer {
@@ -42,16 +42,12 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		padding: 12px;
-	}
-
-	footer a {
-		font-weight: bold;
+		padding-bottom: 12px;
 	}
 
 	@media (min-width: 480px) {
 		footer {
-			padding: 12px 0;
+			padding-bottom: 12px 0;
 		}
 	}
 </style>

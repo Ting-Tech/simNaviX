@@ -1,10 +1,16 @@
 package main
 
-import "gin/router"
+import (
+	"gin/config"
+	"gin/model"
+	"gin/router"
+)
 
 func main() {
+	config.ConnectDB()
+	config.DB.AutoMigrate(&model.Robot{})
+
 	router := router.SetupRouter()
 
-	// Run the server on port 8080
 	router.Run(":8080")
 }
